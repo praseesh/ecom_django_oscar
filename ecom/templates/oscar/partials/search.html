@@ -1,0 +1,45 @@
+{% load i18n %}
+
+<style>
+    .search-container {
+        display: flex;
+        align-items: center;
+        background-color: #f8f9fa;
+        border-radius: 25px;
+        padding: 5px 15px;
+        max-width: 300px;
+        margin-left: 20px;  /* This will push the container to the right */
+        margin-right: 400px; /* Adjust this value as needed */
+    }
+    .search-input {
+        border: none;
+        background: transparent;
+        margin-right: 10px;
+        flex-grow: 1;
+    }
+    .search-input:focus {
+        outline: none;
+    }
+    .search-btn {
+        background: none;
+        border: none;
+        color: #ffffff;  /* Light color for the button */
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: #6c757d;  /* Light grey background */
+        transition: background-color 0.3s ease;
+    }
+    .search-btn:hover {
+        background-color: #5a6268;  /* Slightly darker on hover */
+    }
+</style>
+
+<div class="search-container">
+    <form class="d-flex w-100" method="GET" action="{% url 'search:search' %}">
+        <input class="search-input" type="search" name="q" id="id_q" placeholder="{% trans 'Search' %}" aria-label="{% trans 'Search' %}">
+        <button class="search-btn" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+</div>
