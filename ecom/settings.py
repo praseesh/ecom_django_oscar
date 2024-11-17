@@ -7,10 +7,6 @@ from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# .com/en/4.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-55p^8+_83)w*knb7tb_43#cpbc*oouc(7b4l-*t245_rvs$9e&'
 
